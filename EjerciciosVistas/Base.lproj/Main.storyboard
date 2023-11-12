@@ -32,22 +32,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kE0-D2-mLG">
+                                <rect key="frame" x="146" y="347" width="187" height="30"/>
+                                <connections>
+                                    <action selector="cambiaSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Vw-42-nbk"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hipervelocidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjE-kh-3af">
+                                <rect key="frame" x="16" y="351" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84k-Yo-3Ri">
+                                <rect key="frame" x="339" y="351" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Lq6-Mf-eBr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kE0-D2-mLG" firstAttribute="leading" secondItem="EjE-kh-3af" secondAttribute="trailing" constant="17" id="011-Zi-ANS"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="leading" secondItem="nVo-id-XN2" secondAttribute="leading" id="0gn-f3-Aim"/>
+                            <constraint firstItem="kE0-D2-mLG" firstAttribute="top" secondItem="z85-Ga-uVO" secondAttribute="bottom" constant="35" id="0lT-vP-Qdo"/>
+                            <constraint firstItem="EjE-kh-3af" firstAttribute="baseline" secondItem="84k-Yo-3Ri" secondAttribute="baseline" id="1sU-r2-SEp"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="top" secondItem="nVo-id-XN2" secondAttribute="bottom" constant="18" id="5gG-Wy-b68"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="trailing" secondItem="nVo-id-XN2" secondAttribute="trailing" id="6TN-Ur-eUg"/>
-                            <constraint firstItem="nVo-id-XN2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BpP-IS-dzA"/>
+                            <constraint firstItem="nVo-id-XN2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Nke-aR-Ooy"/>
+                            <constraint firstItem="z85-Ga-uVO" firstAttribute="trailing" secondItem="84k-Yo-3Ri" secondAttribute="trailing" id="Pqk-mX-vds"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kE0-D2-mLG" secondAttribute="bottom" constant="442" id="Txc-hH-WXE"/>
+                            <constraint firstItem="z85-Ga-uVO" firstAttribute="leading" secondItem="EjE-kh-3af" secondAttribute="leading" id="UCk-dX-Lvz"/>
                             <constraint firstItem="nVo-id-XN2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="UF1-G6-Dl2"/>
+                            <constraint firstItem="kE0-D2-mLG" firstAttribute="centerY" secondItem="84k-Yo-3Ri" secondAttribute="centerY" id="XuA-nE-xhD"/>
+                            <constraint firstItem="84k-Yo-3Ri" firstAttribute="leading" secondItem="kE0-D2-mLG" secondAttribute="trailing" constant="8" id="aRW-SZ-fu9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z85-Ga-uVO" secondAttribute="bottom" constant="506" id="cRc-2V-wWg"/>
-                            <constraint firstItem="nVo-id-XN2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tzz-tY-2iP"/>
+                            <constraint firstItem="nVo-id-XN2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qPM-iE-epr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="slider" destination="kE0-D2-mLG" id="dN9-R9-3aK"/>
                         <outlet property="textField" destination="nVo-id-XN2" id="Vgn-L3-am3"/>
                         <outlet property="textView" destination="z85-Ga-uVO" id="mtD-Q8-lWa"/>
+                        <outlet property="valorSlider" destination="84k-Yo-3Ri" id="Ixk-M1-iKO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

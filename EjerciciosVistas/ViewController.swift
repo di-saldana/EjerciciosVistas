@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textField: UITextField!
     
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var valorSlider: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +22,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.delegate = self
         
         self.textView.backgroundColor = .cyan
+        
+        self.slider.minimumValue = 0
+        self.slider.maximumValue = 100
+        self.slider.value = 0
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with: UIEvent?) {
@@ -40,6 +47,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         sender.text = ""
         sender.resignFirstResponder()
+    }
+    
+    
+    @IBAction func cambiaSlider(_ sender: UISlider) {
+        let valorActual = Int(sender.value)
+        self.valorSlider.text = "\(valorActual)"
     }
     
 }
