@@ -53,6 +53,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox2-yd-TS2">
+                                <rect key="frame" x="135" y="444" width="124" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="¡Emergencia!"/>
+                                <connections>
+                                    <action selector="mostrarEmergencia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Am4-bK-qVW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,6 +72,7 @@
                             <constraint firstItem="EjE-kh-3af" firstAttribute="baseline" secondItem="84k-Yo-3Ri" secondAttribute="baseline" id="1sU-r2-SEp"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="top" secondItem="nVo-id-XN2" secondAttribute="bottom" constant="18" id="5gG-Wy-b68"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="trailing" secondItem="nVo-id-XN2" secondAttribute="trailing" id="6TN-Ur-eUg"/>
+                            <constraint firstItem="ox2-yd-TS2" firstAttribute="centerX" secondItem="z85-Ga-uVO" secondAttribute="centerX" id="Fdw-ab-zmW"/>
                             <constraint firstItem="nVo-id-XN2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Nke-aR-Ooy"/>
                             <constraint firstItem="z85-Ga-uVO" firstAttribute="trailing" secondItem="84k-Yo-3Ri" secondAttribute="trailing" id="Pqk-mX-vds"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kE0-D2-mLG" secondAttribute="bottom" constant="442" id="Txc-hH-WXE"/>
@@ -72,6 +82,8 @@
                             <constraint firstItem="84k-Yo-3Ri" firstAttribute="leading" secondItem="kE0-D2-mLG" secondAttribute="trailing" constant="8" id="aRW-SZ-fu9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z85-Ga-uVO" secondAttribute="bottom" constant="506" id="cRc-2V-wWg"/>
                             <constraint firstItem="nVo-id-XN2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qPM-iE-epr"/>
+                            <constraint firstItem="ox2-yd-TS2" firstAttribute="top" secondItem="kE0-D2-mLG" secondAttribute="bottom" constant="68" id="vPq-Fl-yLw"/>
+                            <constraint firstItem="ox2-yd-TS2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="w2v-eu-Te0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -92,6 +104,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

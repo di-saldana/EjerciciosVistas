@@ -55,5 +55,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.valorSlider.text = "\(valorActual)"
     }
     
+    
+    @IBAction func mostrarEmergencia(_ sender: UIButton) {
+        let actionSheet = UIAlertController(title: "¡Emergencia!", message: "Seleccione la opción", preferredStyle: .actionSheet)
+
+        let naveSalvavidasAction = UIAlertAction(title: "Nave salvavidas", style: .default) { _ in
+            print("¡¡Lanzada nave salvavidas!!")
+        }
+
+        let hiperespacioAction = UIAlertAction(title: "Hiperespacio", style: .default) { _ in
+            print("¡¡Entrando en hiperespacio!!")
+        }
+
+        let autodestruccionAction = UIAlertAction(title: "Autodestrucción", style: .destructive) { _ in
+            print("¡¡Autodestrucción activada!!")
+        }
+
+        let cancelar = UIAlertAction(title: "Cancelar", style: .cancel) {
+                    action in
+                    print("Aquí no se haría nada")
+        }
+
+        actionSheet.addAction(naveSalvavidasAction)
+        actionSheet.addAction(hiperespacioAction)
+        actionSheet.addAction(autodestruccionAction)
+        actionSheet.addAction(cancelar)
+
+        self.present(actionSheet, animated: true) {
+           print("Ha acabado la animación del action sheet")
+        }
+    }
 }
 
