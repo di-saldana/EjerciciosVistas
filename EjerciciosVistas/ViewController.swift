@@ -15,6 +15,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var valorSlider: UILabel!
     
+    @IBOutlet weak var destinoPickerView: UIPickerView!
+    
+    let gestorPicker = GestorPicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,6 +30,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.slider.minimumValue = 0
         self.slider.maximumValue = 100
         self.slider.value = 0
+        
+        self.destinoPickerView.delegate = self.gestorPicker
+        self.destinoPickerView.dataSource = self.gestorPicker
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with: UIEvent?) {
@@ -85,5 +92,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
            print("Ha acabado la animación del action sheet")
         }
     }
+
 }
 
